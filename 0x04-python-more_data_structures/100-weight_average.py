@@ -1,19 +1,10 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    if not my_list or my_list is None:
-        return 0
-    totalV = 0
-    weight = 0
-    for i in my_list:
-        totalV += i[0] * i[1]
-        weight += i[1]
-    return totalV / i#!/usr/bin/python3
-def weight_average(my_list=[]):
-    if not my_list or my_list is None:
-        return 0
-    totalV = 0
-    weight = 0
-    for i in my_list:
-        totalV += i[0] * i[1]
-        weight += i[1]
-    return totalV / weight
+    if len(my_list) == 0:
+        return (0)
+    sum = 0
+    div = 0
+    for item in my_list:
+        sum = sum + (item[0] * item[1])
+        div = div + item[-1]
+    return (sum/div)
